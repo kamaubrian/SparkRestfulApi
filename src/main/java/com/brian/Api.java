@@ -15,7 +15,7 @@ public class Api {
     public static void main(String [] args){
         System.out.println("Welcome To The World Of Application Programming Interfaces.");
         final Gson gson = new Gson();
-        post("/add-post",(req,res)->{
+        post("/addpost",(req,res)->{
             res.type("application/json");
             blog Blog = gson.fromJson(req.body(),blog.class);
             return userservice.addPost(Blog);
@@ -24,6 +24,16 @@ public class Api {
         get("/",(req,res)->{
             res.type("application/json");
             return userservice.getAllPosts();
+        },gson::toJson);
+
+        get("/:username",(req,res)->{
+            res.type("application/json");
+            blog log = userservice.getPostbyName(req.params("username"));
+            if(log!=null){
+                return log;
+            }else{
+                return "Post Not Found";
+            }
         },gson::toJson);
     }
 }

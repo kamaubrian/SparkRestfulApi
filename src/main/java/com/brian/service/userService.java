@@ -23,4 +23,12 @@ public class userService {
         }
         return null;
     }
+    public blog getPostbyName(String username){
+        blog log = datastore.find(blog.class,"oth",username).get();
+        if(log!=null){
+            return log;
+        }else{
+            return null;
+        }
+    }
 }

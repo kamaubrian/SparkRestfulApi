@@ -30,4 +30,28 @@ public class blog {
     public void setId(ObjectId id) {
         this.id = id;
     }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getOth() {
+        return oth;
+    }
+
+    public void setOth(String oth) {
+        this.oth = oth;
+    }
 }
