@@ -17,8 +17,8 @@ public class Api {
         final Gson gson = new Gson();
         post("/add-post",(req,res)->{
             res.type("application/json");
-            blog blog = gson.fromJson(res.body(), com.brian.model.blog.class);
-            return userservice.addPost(blog);
+            blog Blog = gson.fromJson(req.body(),blog.class);
+            return userservice.addPost(Blog);
         },gson::toJson);
 
         get("/",(req,res)->{

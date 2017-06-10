@@ -1,6 +1,6 @@
 package com.brian.model;
-
-import com.sun.corba.se.spi.ior.ObjectId;
+import org.bson.types.ObjectId;
+//import com.sun.corba.se.spi.ior.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 

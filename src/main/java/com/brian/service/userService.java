@@ -12,8 +12,8 @@ public class userService {
     Datastore datastore = new Morphia().createDatastore(client,"blog");
 
 
-    public String addPost(blog log){
-        datastore.save(log);
+    public String addPost(blog Blog){
+        datastore.save(Blog);
         return "add post";
     }
     public List<blog> getAllPosts(){
