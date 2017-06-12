@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by brian-kamau on 6/9/17.
  */
-public class userService {
+public class userService extends mainModel {
     MongoClient client = new MongoClient("localhost",27017);
     Datastore datastore = new Morphia().createDatastore(client,"blog");
 
