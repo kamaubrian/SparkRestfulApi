@@ -3,6 +3,8 @@ import com.brian.model.blog;
 import com.mongodb.MongoClient;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
+
+import java.util.ArrayList;
 import java.util.List;
 /**
  * Created by brian-kamau on 6/9/17.
@@ -30,5 +32,18 @@ public class userService {
         }else{
             return null;
         }
+    }
+
+    public Object getData(String table) {
+        //Declare variable results
+        List<String> resultsArrayList  = new ArrayList<String>();
+        //Check if tablel exists in database
+
+        //Select all from table  if exists
+
+        //Create list with the data
+        //resultArrayList  = $select* from table ;
+        //return this list
+        return resultsArrayList;
     }
 }

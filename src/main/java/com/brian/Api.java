@@ -21,9 +21,12 @@ public class Api {
             return userservice.addPost(Blog);
         },gson::toJson);
 
-        get("/",(req,res)->{
+        get("/api/v1/posts/:table",(req,res)->{
             res.type("application/json");
-            return userservice.getAllPosts();
+            String table = req.params(":table");
+            System.out.println("this is the resource we want" + table);
+//            return userservice.getAllPosts();
+            return userservice.getData(table);
         },gson::toJson);
 
         get("/:username",(req,res)->{
