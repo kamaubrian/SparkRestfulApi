@@ -46,4 +46,12 @@ public class userService extends mainModel {
         //return this list
         return resultsArrayList;
     }
+    public String  getUser(String username){
+        blog log =datastore.find(blog.class,"oth",username).get();
+        if(log!=null){
+            return "username Found"+username;
+        }
+        return "Not Found";
+    }
+
 }

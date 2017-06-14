@@ -21,15 +21,15 @@ public class Api {
             return userservice.addPost(Blog);
         },gson::toJson);
 
-        get("/api/v1/posts/:table",(req,res)->{
+        get("/seeposts",(req,res)->{
             res.type("application/json");
             String table = req.params(":table");
-            System.out.println("this is the resource we want" + table);
-//            return userservice.getAllPosts();
-            return userservice.getData(table);
+            System.out.println("this is the resource we want" +table);
+            return userservice.getAllPosts();
+            //return userservice.getData(table);
         },gson::toJson);
 
-        get("/:username",(req,res)->{
+       /* get("/:username",(req,res)->{
             res.type("application/json");
             blog log = userservice.getPostbyName(req.params("username"));
             if(log!=null){
@@ -37,6 +37,16 @@ public class Api {
             }else{
                 return "Post Not Found";
             }
-        },gson::toJson);
+        },gson::toJson);*/
+        get("/:username",(req,res)->{
+            res.type("application/json");
+            String blog = userservice.getUser(req.params("username"));
+            if(blog.isEmpty()){
+                return "Not Found";
+            }
+            else{
+               return "User Found";
+            }
+        },gson ::toJson);
     }
 }

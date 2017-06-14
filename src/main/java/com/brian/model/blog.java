@@ -35,23 +35,23 @@ public class blog {
         return title;
     }
 
-    public void setTitle(String title) {
+    public void setTitle(String title){
         this.title = title;
     }
 
-    public String getDescription() {
+    public String getDescription(){
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description){
         this.description = description;
     }
 
-    public String getOth() {
+    public String getOth(){
         return oth;
     }
 
-    public void setOth(String oth) {
+    public void setOth(String oth){
         this.oth = oth;
     }
 }
